@@ -1,19 +1,18 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var a = Console.ReadLine();
-            Console.WriteLine(a);
-        }
+            var ef = new ExampleFactory();
+            var example = ef.GetExample(3);
 
-        public string Example1()
-        {
-            return "asdwe";
+            //example.Demonstrate();
+            await example.DemonstrateAsync();
+
         }
     }
 }
