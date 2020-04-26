@@ -5,13 +5,13 @@ namespace ClientDemonstration
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             var ef = new ExampleFactory();
-            var example = ef.GetExample(5);
+            var example = ef.GetExample(22);
 
-            //example.Demonstrate();
-            await example.DemonstrateAsync();
+            example.Demonstrate();
+            //await example.DemonstrateAsync();
 
         }
     }
