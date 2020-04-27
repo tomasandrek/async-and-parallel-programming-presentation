@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Checking if everything has been done. Task.WhenAll(
+    /// </summary>
     public class Example3 : IDemonstrable
     {
         private const int PreparationTime = 6000;

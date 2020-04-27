@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Real asynchronous and effective
+    /// </summary>
     public class Example2 : IDemonstrable
     {
         private const int PreparationTime = 2000;

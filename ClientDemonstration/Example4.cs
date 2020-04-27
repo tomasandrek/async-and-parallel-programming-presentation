@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Checking if anything has been done. .Any()
+    /// </summary>
     public class Example4 : IDemonstrable
     {
         private static readonly HttpClient client = new HttpClient();

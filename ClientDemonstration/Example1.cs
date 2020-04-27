@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// The difference between synchronous and asynchronous.
+    /// </summary>
     public class Example1 : IDemonstrable
     {
         private const int PreparationTime = 2000;
@@ -76,7 +79,7 @@ namespace ClientDemonstration
 
         private Coffee PourCoffee()
         {
-            Thread.Sleep(PreparationTime);
+            Thread.Sleep(PreparationTime); // https://referencesource.microsoft.com/#mscorlib/system/threading/thread.cs,6a577476abf2f437 (721)
             return new Coffee();
         }
 #endregion
@@ -107,7 +110,7 @@ namespace ClientDemonstration
 
         private async Task<Egg> FryEggsAsync()
         {
-            await Task.Delay(PreparationTime);
+            await Task.Delay(PreparationTime); // https://referencesource.microsoft.com/#mscorlib/system/threading/Tasks/Task.cs,5fb80297e082b8d6 (5863)
             return new Egg();
         }
 

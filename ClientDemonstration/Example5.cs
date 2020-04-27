@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Bad practices.
+    /// </summary>
     public class Example5 : IDemonstrable
     {
         private static readonly HttpClient client = new HttpClient();
