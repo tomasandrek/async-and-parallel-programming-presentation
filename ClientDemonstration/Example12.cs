@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Progress reporting
+    /// </summary>
     public class Example12 : IDemonstrable
     {
         private static readonly HttpClient client = new HttpClient();
 
         public async Task DemonstrateAsync()
         {
-            // Reporting progress
             await GetResponses(new Progress<int>(percent => Console.WriteLine(percent + "% done.")));
         }
 

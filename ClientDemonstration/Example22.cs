@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Parallel.ForEach
+    /// </summary>
     public class Example22 : IDemonstrable
     {
         private static readonly HttpClient client = new HttpClient();
@@ -29,7 +32,7 @@ namespace ClientDemonstration
 
         public async Task DemonstrateAsync()
         {
-            throw new NotImplementedException();
+            await Task.FromException(new NotImplementedException());
         }
     }
 }

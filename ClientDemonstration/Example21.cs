@@ -1,20 +1,14 @@
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Deadlocks
+    /// </summary>
     public class Example21 : IDemonstrable
     {
-
-        public async Task DemonstrateAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-
         public void Demonstrate()
         {
             // Simulation of a deadlock.
@@ -49,6 +43,11 @@ namespace ClientDemonstration
         
             Task.WaitAll(task1, task2);
             Console.WriteLine("Finished...");
+        }
+
+        public async Task DemonstrateAsync()
+        {
+           await Task.FromException(new NotImplementedException());
         }
 
     }

@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Task cancelation
+    /// </summary>
     public class Example11 : IDemonstrable
     {
         private static readonly HttpClient client = new HttpClient();
@@ -14,7 +16,6 @@ namespace ClientDemonstration
 
         public async Task DemonstrateAsync()
         {
-            // Task continuation
             Console.CancelKeyPress += (sender, eventArgs) =>
             {
                 Console.WriteLine("Cancel event triggered");

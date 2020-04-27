@@ -1,11 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClientDemonstration
 {
+    /// <summary>
+    /// Lock and atomic operations
+    /// </summary>
     public class Example20 : IDemonstrable
     {
         static readonly object _object = new object();  
@@ -34,8 +35,7 @@ namespace ClientDemonstration
 
         public async Task DemonstrateAsync()
         {
-            // Reporting progress
-            throw new NotImplementedException();
+            await Task.FromException(new NotImplementedException());
         }
     }
 }
